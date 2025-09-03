@@ -1,21 +1,16 @@
-package week2.day2;
-
+package week3.day2;
 
 public class Browser {
-	
-	public static void main(String[] args) {
-		Browser browser=new Browser();
-		browser.launchBrowser("Chrome");
-		String result =browser.loadUrl();
-		System.out.println(result);
+	String browserName;
+	String browserVersion;
+	public void openURL() {
+		System.out.println("Browser is opened");
+	}
+	public void closeBrowser() {
+		System.out.println("Browser is closed");
+	}
+	public void navigateBack() {
+		System.out.println("Browser is navigated");
 	}
 
-	public void launchBrowser(String browserName) {
-		System.out.println("Browser launched:"+browserName);
-	}
-		public String loadUrl() {
-			return "URL loaded successfully";
-		
-		
-	}
 }
