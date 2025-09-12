@@ -1,15 +1,30 @@
-package week3.day1;
+package week4.day1;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MissingElement {
 
 	public static void main(String[] args) {
-		int[] arr= {1,4,3,2,8,6,7};
-		Arrays.sort(arr);
-		for(int i=0;i<arr.length-1;i++) {
-			if(arr[i+1]!=arr[i]+1){
-				System.out.println("Missing number is:"+(arr[i]+1));
+		//given array
+		int[] array= {1,2,3,4,10,6,8};
+		//convert to list and sort
+		List<Integer>list=new ArrayList<>();
+		for(int num:array) {
+			list.add(num);
+		}
+		Collections.sort(list);
+		System.out.println("sorted list:"+list);
+		//check gaps
+		for(int i=0;i<list.size()-1;i++) {
+			int current=list.get(i);
+			int next=list.get(i+1);
+			//if there is a gap
+			if(current+1!=next) {
+				for(int j=current+1;j<next;j++) {
+					System.out.println(j+"");
+				}
 			}
 		}
 
